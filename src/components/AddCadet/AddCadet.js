@@ -4,10 +4,11 @@ import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
+import { useNavigate } from 'react-router-dom';
 
 function AddCadet(props) {
 	const [startDate, setStartDate] = useState(new Date());
-	const [gender, setGender] = useState(null);
+	const navigate = useNavigate();
 	const [newCadet, setNewCadet] = useState({
 		lastname: '',
 		firstname: '',
@@ -23,7 +24,21 @@ function AddCadet(props) {
 		bodyfat: '',
 	});
 
-	const createNewCadet = () => {};
+	const createNewCadet = () => {
+		fetch('https://armypttest.herokuapp.com/api/cadet/', {
+			method: 'POST',
+			body: JSON.stringify(newCadet),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+		.then((res) => {
+			return res.json();
+		})
+		.then((res) => {
+			navigate('/cadetlist')
+		})
+	};
 
 	const handleChange = (event) => {
 		setNewCadet({ ...newCadet, [event.target.id]: event.target.value });
@@ -75,6 +90,7 @@ function AddCadet(props) {
 					id='gender'
 					onChange={handleChange}
 					className='form-input'
+
 				/>
 			</label>
 			<label htmlFor='unit'>
