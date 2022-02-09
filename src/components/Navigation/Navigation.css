@@ -1,0 +1,34 @@
+a {
+	text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: forestgreen;
+}
+
+a:active {
+    color: grey;
+}
+
+li {
+	list-style: none;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-title {
+    float: left; 
+}
+.nav-ul {
+    display: flex;
+    width: 225px;
+    padding: 0;
+}
+
+.li-link {
+    margin: 5px;
+}

@@ -1,0 +1,11 @@
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-input {
+    margin: 5px 5px 10px 15px;
+}
