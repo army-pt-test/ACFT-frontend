@@ -4,7 +4,7 @@ import './CadetDetails.css';
 function CadetDetails(props) {
     return (
         <div>
-            Hello from Cadet Details
+            Hello from Cadet Details!!
         </div>
     );
 }
