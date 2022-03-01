@@ -7,7 +7,7 @@ function Navigation(props) {
 		<div className='navbar-wrapper'>
 			<div className='navbar-title'>
 				<Link to='/'>
-					<h1>Army PT Testing</h1>
+					<h1>Army Combat Fitness Test</h1>
 				</Link>
 			</div>
 			<nav className='main-nav'>

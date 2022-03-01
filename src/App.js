@@ -8,6 +8,7 @@ import CadetList from './components/CadetList/CadetList';
 import AddCadet from './components/AddCadet/AddCadet';
 import CadetDetails from './components/CadetDetails/CadetDetails';
 import Home from './components/Home/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const CadetContext = createContext('');
 
