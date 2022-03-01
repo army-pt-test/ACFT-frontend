@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { CadetContext } from '../../App';
 import './CadetList.css';
-import CadetDetails from '../CadetDetails/CadetDetails';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
@@ -29,7 +28,7 @@ function CadetList(props) {
 			{cadetList &&
 				cadetList.map((cadet) => (
 					<li>
-						<Link to={`/cadet/${cadet.id}`}>
+						<Link to={`/cadetlist/${cadet.id}`}>
 							<div className='mb-3 mt-5 '>
 								<Container className='d-flex align-items-center justify-content-center'>
 									{cadet.firstname} {cadet.lastname}
