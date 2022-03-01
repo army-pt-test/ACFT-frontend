@@ -1,36 +1,43 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { CadetContext } from '../../App';
 import './CadetList.css';
-import { useEffect, useState } from 'react';
+import CadetDetails from '../CadetDetails/CadetDetails';
+import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 function CadetList(props) {
-	const [cadetList, setCadetList] = useState([]);
+	const { cadetList, setCadetList } = useContext(CadetContext);
 
-	const fetchCadet = () => {
-		fetch('https://armypttest.herokuapp.com/api/cadet/')
-			.then((res) => res.json())
-			.then((res) => {
-				setCadetList(res);
-			});
+	const getCadets = async () => {
+		try {
+			const res = await fetch('https://armypttest.herokuapp.com/api/cadet/');
+			const data = await res.json();
+			if (res.status === 200) {
+				setCadetList(data);
+				console.log(data);
+			}
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	useEffect(() => {
-		fetchCadet();
+		getCadets();
 	}, []);
-
 	return (
 		<div>
-			<ul>
-				{cadetList.map((cadets) => {
-					return (
-						<li>
-							<Link to={`/cadetlist/${cadets.id}`}>
-								<h1>{cadets.lastname}</h1>
-							</Link>
-						</li>
-					);
-				})}
-			</ul>
+			{cadetList &&
+				cadetList.map((cadet) => (
+					<li>
+						<Link to={`/cadet/${cadet.id}`}>
+							<div className='mb-3 mt-5 '>
+								<Container className='d-flex align-items-center justify-content-center'>
+									{cadet.firstname} {cadet.lastname}
+								</Container>
+							</div>
+						</Link>
+					</li>
+				))}
 		</div>
 	);
 }
