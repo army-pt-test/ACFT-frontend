@@ -1,34 +1,44 @@
 a {
 	text-decoration: none;
-    color: black;
+	color: black;
 }
 
 a:hover {
-    color: forestgreen;
+	color: forestgreen;
 }
 
 a:active {
-    color: grey;
+	color: grey;
 }
 
 li {
 	list-style: none;
+	padding: 5px;
 }
 
 .navbar-wrapper {
-    display: flex;
-    justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
+    padding: 0 2em;
 }
 
-.navbar-title {
-    float: left; 
-}
 .nav-ul {
-    display: flex;
-    width: 225px;
-    padding: 0;
+	padding-right: 30px;
+	list-style-type: none;
+	display: flex;
 }
 
 .li-link {
-    margin: 5px;
+    margin-left: 75px;
+}
+
+.navbar-title,
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-nav {
+	padding-left: 20px;
 }
