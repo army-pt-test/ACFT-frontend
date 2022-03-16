@@ -4,24 +4,25 @@ import './Navigation.css';
 
 function Navigation(props) {
 	return (
-		<div className='navbar-wrapper'>
-			<div className='navbar-title'>
+		<div className='header-nav'>
+			<nav className='nav-bar'>
 				<Link to='/'>
-					<h1>Army Combat Fitness Test</h1>
+					<h1 className='nav-title'>Army Combat Fitness Test</h1>
 				</Link>
-			</div>
-			<nav className='main-nav'>
-				<ul className='nav-ul'>
-					<li className='li-link'>
-						<Link to='/'>Home</Link>
-					</li>
-					<li className='li-link'>
-						<Link to='/cadetlist'>Cadet List</Link>
-					</li>
-					<li className='li-link'>
-						<Link to='/addcadet'>Add Cadet</Link>
-					</li>
-				</ul>
+
+				<div className='main-nav'>
+					<ul className='nav-ul'>
+						<li className='nav-li'>
+							<Link to='/'>Home</Link>
+						</li>
+						<li className='nav-li'>
+							<Link to='/cadetlist'>Cadet List</Link>
+						</li>
+						<li className='nav-li'>
+							<Link to='/addcadet'>Add Cadet</Link>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</div>
 	);

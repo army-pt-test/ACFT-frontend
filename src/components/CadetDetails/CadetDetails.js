@@ -2,7 +2,7 @@ import React from 'react';
 import './CadetDetails.css';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Card, ListGroup, Table, Button } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 
 function CadetDetails(props) {
 	const [details, setDetails] = useState(null);
@@ -69,6 +69,14 @@ function CadetDetails(props) {
 						<th>Body Fat %</th>
 					</tr>
 				</thead>
+				<tbody>
+					<tr>
+						<td>{details.date}</td>
+						<td>{details.heightininches}</td>
+						<td>{details.weightinpounds}</td>
+						<td>{details.bodyfatpercentage}</td>
+					</tr>
+				</tbody>
 				<tbody>
 					<tr>
 						<td>{details.date}</td>
