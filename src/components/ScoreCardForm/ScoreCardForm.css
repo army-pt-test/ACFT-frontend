@@ -10,6 +10,11 @@ a {
 	text-decoration: none;
 }
 
-.testsections {
+.testsections,
+.signatures {
 	border-top: 1px solid black;
+}
+
+.signatures {
+	padding-top: 20px;
 }
