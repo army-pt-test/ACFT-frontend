@@ -10,6 +10,29 @@ function ScoreCardForm(props) {
 		weightpass: Boolean,
 		bodyfatpct: '',
 		bodyfatpctpass: Boolean,
+		firstdeadlift: '',
+		seconddeadlift: '',
+		deadliftgrader: '',
+		firstspt: '',
+		secondspt: '',
+		sptgrader: '',
+		hrp: '',
+		hrpgrader: '',
+		sdc: '',
+		sdcgrader: '',
+		ltk: '',
+		ltkgrader: '',
+		plank: '',
+		plankgrader: '',
+		twomr: '',
+		twomrgrader: '',
+		fivekrow: Boolean,
+		onekswim: Boolean,
+		twelvekbike: Boolean,
+		choicegrader: '',
+		choicescore: '',
+		choicego: '',
+		choicenogo: '',
 	};
 
 	const [formData, setFormData] = useState(defaultData);
@@ -158,13 +181,12 @@ function ScoreCardForm(props) {
 
 					<li className='form-li testsections'>
 						<label className='form-label' htmlFor='deadlift'>
-							3 Repetition Maximum Deadlift: weight lifted (lbs){' '}
+							3 Repetition Maximum Deadlift: Weight lifted (lbs){' '}
 						</label>
 						<br />
 						<span>1st Attempt:</span>
 						<select
 							className='form-input'
-							placeholder='1st Attempt'
 							id='firstdeadlift'
 							type='text'
 							value={formData.firstdeadlift}
@@ -206,7 +228,6 @@ function ScoreCardForm(props) {
 						<span>2nd Attempt:</span>
 						<select
 							className='form-input'
-							placeholder='2nd Attempt'
 							id='seconddeadlift'
 							type='text'
 							value={formData.seconddeadlift}
@@ -265,7 +286,6 @@ function ScoreCardForm(props) {
 						<span>1st Attempt:</span>
 						<select
 							className='form-input'
-							placeholder='1st Attempt'
 							id='firstspt'
 							type='text'
 							value={formData.firstspt}
@@ -332,7 +352,6 @@ function ScoreCardForm(props) {
 						<span>2nd Attempt:</span>
 						<select
 							className='form-input'
-							placeholder='2nd Attempt'
 							id='secondspt'
 							type='text'
 							value={formData.secondspt}
@@ -410,13 +429,12 @@ function ScoreCardForm(props) {
 					</li>
 					<li className='form-li testsections'>
 						<label className='form-label' htmlFor='hrp'>
-							Hand Release Push-Up: number of correctly performed repetitions{' '}
+							Hand Release Push-Up: Number of correctly performed repetitions{' '}
 						</label>
 						<br />
 						<span>Repetitions: </span>
 						<select
 							className='form-input'
-							placeholder='1st Attempt'
 							id='hrp'
 							type='text'
 							value={formData.hrp}
@@ -490,6 +508,533 @@ function ScoreCardForm(props) {
 						<br />
 						<span>Points: </span>
 					</li>
+					<li className='form-li testsections'>
+						<label className='form-label' htmlFor='sdc'>
+							Sprint-Drag-Carry: Overall event time{' '}
+						</label>
+						<br />
+						<span>Time (minutes:seconds) </span>
+						<select
+							className='form-input'
+							id='sdc'
+							type='text'
+							value={formData.sdc}
+							onChange={(event) =>
+								setFormData({ ...formData, sdc: event.target.value })
+							}>
+							<option value='1:33'>1:33</option>
+							<option value='1:36'>1:36</option>
+							<option value='1:39'>1:39</option>
+							<option value='1:41'>1:41</option>
+							<option value='1:43'>1:43</option>
+							<option value='1:45'>1:45</option>
+							<option value='1:46'>1:46</option>
+							<option value='1:47'>1:47</option>
+							<option value='1:48'>1:48</option>
+							<option value='1:49'>1:49</option>
+							<option value='1:50'>1:50</option>
+							<option value='1:51'>1:51</option>
+							<option value='1:52'>1:52</option>
+							<option value='1:53'>1:53</option>
+							<option value='1:54'>1:54</option>
+							<option value='1:55'>1:55</option>
+							<option value='1:56'>1:56</option>
+							<option value='1:57'>1:57</option>
+							<option value='1:58'>1:58</option>
+							<option value='1:59'>1:59</option>
+							<option value='2:00'>2:00</option>
+							<option value='2:01'>2:01</option>
+							<option value='2:02'>2:02</option>
+							<option value='2:03'>2:03</option>
+							<option value='2:04'>2:04</option>
+							<option value='2:05'>2:05</option>
+							<option value='2:06'>2:06</option>
+							<option value='2:07'>2:07</option>
+							<option value='2:08'>2:08</option>
+							<option value='2:09'>2:09</option>
+							<option value='2:10'>2:10</option>
+							<option value='2:14'>2:14</option>
+							<option value='2:18'>2:18</option>
+							<option value='2:22'>2:22</option>
+							<option value='2:26'>2:26</option>
+							<option value='2:30'>2:30</option>
+							<option value='2:35'>2:35</option>
+							<option value='2:40'>2:40</option>
+							<option value='2:45'>2:45</option>
+							<option value='2:50'>2:50</option>
+							<option value='3:00' selected={true}>
+								3:00
+							</option>
+							<option value='3:01'>3:01</option>
+							<option value='3:02'>3:02</option>
+							<option value='3:03'>3:03</option>
+							<option value='3:04'>3:04</option>
+							<option value='3:05'>3:05</option>
+							<option value='3:06'>3:06</option>
+							<option value='3:07'>3:07</option>
+							<option value='3:08'>3:08</option>
+							<option value='3:09'>3:09</option>
+							<option value='3:10'>3:10</option>
+							<option value='3:11'>3:11</option>
+							<option value='3:12'>3:12</option>
+							<option value='3:13'>3:13</option>
+							<option value='3:14'>3:14</option>
+							<option value='3:15'>3:15</option>
+							<option value='3:16'>3:16</option>
+							<option value='3:17'>3:17</option>
+							<option value='3:18'>3:18</option>
+							<option value='3:19'>3:19</option>
+							<option value='3:20'>3:20</option>
+							<option value='3:21'>3:21</option>
+							<option value='3:22'>3:22</option>
+							<option value='3:23'>3:23</option>
+							<option value='3:24'>3:24</option>
+							<option value='3:25'>3:25</option>
+							<option value='3:26'>3:26</option>
+							<option value='3:27'>3:27</option>
+							<option value='3:28'>3:28</option>
+							<option value='3:29'>3:29</option>
+							<option value='3:30'>3:30</option>
+							<option value='3:31'>3:31</option>
+							<option value='3:32'>3:32</option>
+							<option value='3:33'>3:33</option>
+							<option value='3:34'>3:34</option>
+							<option value='3:35'>3:35</option>
+						</select>
+						<br />
+						<input
+							className='form-input'
+							placeholder='Grader Initials'
+							id='sdcgrader'
+							type='text'
+							value={formData.sdcgrader}
+							onChange={(event) =>
+								setFormData({ ...formData, sdcgrader: event.target.value })
+							}></input>
+						<br />
+						<span>Points: </span>
+					</li>
+					<li className='form-li testsections'>
+						<label className='form-label' htmlFor='ltk'>
+							Leg Tuck: Number of correctly performed repetitions{' '}
+						</label>
+						<br />
+						<span>Repetitions: </span>
+						<select
+							className='form-input'
+							id='ltk'
+							type='text'
+							value={formData.ltk}
+							onChange={(event) =>
+								setFormData({ ...formData, ltk: event.target.value })
+							}>
+							<option value='20'>20</option>
+							<option value='19'>19</option>
+							<option value='18'>18</option>
+							<option value='17'>17</option>
+							<option value='16'>16</option>
+							<option value='15'>15</option>
+							<option value='14'>14</option>
+							<option value='13'>13</option>
+							<option value='12'>12</option>
+							<option value='11'>11</option>
+							<option value='10'>10</option>
+							<option value='9'>9</option>
+							<option value='8'>8</option>
+							<option value='7'>7</option>
+							<option value='6'>6</option>
+							<option value='5'>5</option>
+							<option value='4'>4</option>
+							<option value='3'>3</option>
+							<option value='2'>2</option>
+							<option value='1' selected={true}>
+								1
+							</option>
+						</select>
+						<br />
+						<input
+							className='form-input'
+							placeholder='Grader Initials'
+							id='ltkgrader'
+							type='text'
+							value={formData.ltkgrader}
+							onChange={(event) =>
+								setFormData({ ...formData, ltkgrader: event.target.value })
+							}></input>
+						<br />
+						<span>Points: </span>
+					</li>
+					<li className='form-li testsections'>
+						<label className='form-label' htmlFor='plank'>
+							Alternate Plank: Maintain proper straight-line position{' '}
+						</label>
+						<br />
+						<span>Time (minutes:seconds) </span>
+						<select
+							className='form-input'
+							id='plank'
+							type='text'
+							value={formData.plank}
+							onChange={(event) =>
+								setFormData({ ...formData, plank: event.target.value })
+							}>
+							<option value='4:20'>4:20</option>
+							<option value='4:17'>4:17</option>
+							<option value='4:14'>4:14</option>
+							<option value='4:11'>4:11</option>
+							<option value='4:07'>4:07</option>
+							<option value='4:04'>4:04</option>
+							<option value='4:01'>4:01</option>
+							<option value='3:58'>3:58</option>
+							<option value='3:54'>3:54</option>
+							<option value='3:51'>3:51</option>
+							<option value='3:48'>3:48</option>
+							<option value='3:44'>3:44</option>
+							<option value='3:41'>3:41</option>
+							<option value='3:38'>3:38</option>
+							<option value='3:35'>3:35</option>
+							<option value='3:31'>3:31</option>
+							<option value='3:28'>3:28</option>
+							<option value='3:25'>3:25</option>
+							<option value='3:21'>3:21</option>
+							<option value='3:18'>3:18</option>
+							<option value='3:15'>3:15</option>
+							<option value='3:12'>3:12</option>
+							<option value='3:08'>3:08</option>
+							<option value='3:05'>3:05</option>
+							<option value='3:02'>3:02</option>
+							<option value='2:58'>2:58</option>
+							<option value='2:55'>2:55</option>
+							<option value='2:52'>2:52</option>
+							<option value='2:49'>2:49</option>
+							<option value='2:45'>2:45</option>
+							<option value='2:42'>2:42</option>
+							<option value='2:39'>2:39</option>
+							<option value='2:35'>2:35</option>
+							<option value='2:32'>2:32</option>
+							<option value='2:29'>2:29</option>
+							<option value='2:26'>2:26</option>
+							<option value='2:22'>2:22</option>
+							<option value='2:19'>2:19</option>
+							<option value='2:16'>2:16</option>
+							<option value='2:14'>2:14</option>
+							<option value='2:09' selected={true}>
+								2:09
+							</option>
+							<option value='2:07'>2:07</option>
+							<option value='2:05'>2:05</option>
+							<option value='2:03'>2:03</option>
+							<option value='2:01'>2:01</option>
+							<option value='1:59'>1:59</option>
+							<option value='1:57'>1:57</option>
+							<option value='1:55'>1:55</option>
+							<option value='1:53'>1:53</option>
+							<option value='1:51'>1:51</option>
+							<option value='1:49'>1:49</option>
+							<option value='1:47'>1:47</option>
+							<option value='1:45'>1:45</option>
+							<option value='1:43'>1:43</option>
+							<option value='1:41'>1:41</option>
+							<option value='1:39'>1:39</option>
+							<option value='1:37'>1:37</option>
+							<option value='1:35'>1:35</option>
+							<option value='1:33'>1:33</option>
+							<option value='1:31'>1:31</option>
+							<option value='1:29'>1:29</option>
+							<option value='1:27'>1:27</option>
+							<option value='1:25'>1:25</option>
+							<option value='1:23'>1:23</option>
+							<option value='1:21'>1:21</option>
+							<option value='1:19'>1:19</option>
+							<option value='1:17'>1:17</option>
+							<option value='1:15'>1:15</option>
+							<option value='1:13'>1:13</option>
+							<option value='1:11'>1:11</option>
+							<option value='1:09'>1:09</option>
+							<option value='1:07'>1:07</option>
+							<option value='1:05'>1:05</option>
+							<option value='1:03'>1:03</option>
+							<option value='1:01'>1:01</option>
+							<option value='0:59'>0:59</option>
+							<option value='0:57'>0:57</option>
+							<option value='0:55'>0:55</option>
+							<option value='0:53'>0:53</option>
+							<option value='0:51'>0:51</option>
+							<option value='0:49'>0:49</option>
+							<option value='0:47'>0:47</option>
+							<option value='0:45'>0:45</option>
+							<option value='0:43'>0:43</option>
+							<option value='0:41'>0:41</option>
+							<option value='0:39'>0:39</option>
+							<option value='0:37'>0:37</option>
+							<option value='0:35'>0:35</option>
+							<option value='0:33'>0:33</option>
+							<option value='0:31'>0:31</option>
+							<option value='0:29'>0:29</option>
+							<option value='0:27'>0:27</option>
+							<option value='0:25'>0:25</option>
+							<option value='0:23'>0:23</option>
+							<option value='0:21'>0:21</option>
+							<option value='0:19'>0:19</option>
+							<option value='0:17'>0:17</option>
+							<option value='0:15'>0:15</option>
+							<option value='0:13'>0:13</option>
+							<option value='0:11'>0:11</option>
+							<option value='0:09'>0:09</option>
+						</select>
+						<br />
+						<input
+							className='form-input'
+							placeholder='Grader Initials'
+							id='plankgrader'
+							type='text'
+							value={formData.plankgrader}
+							onChange={(event) =>
+								setFormData({ ...formData, plankgrader: event.target.value })
+							}></input>
+						<br />
+						<span>Points: </span>
+					</li>
+					<li className='form-li testsections'>
+						<label className='form-label' htmlFor='twomr'>
+							Two-Mile run: Overall event time{' '}
+						</label>
+						<br />
+						<span>Time (minutes:seconds) </span>
+						<select
+							className='form-input'
+							id='twomr'
+							type='text'
+							value={formData.twomr}
+							onChange={(event) =>
+								setFormData({ ...formData, twomr: event.target.value })
+							}>
+							<option value='13:30'>13:30</option>
+							<option value='13:39'>13:39</option>
+							<option value='13:48'>13:48</option>
+							<option value='13:57'>13:57</option>
+							<option value='14:06'>14:06</option>
+							<option value='14:15'>14:15</option>
+							<option value='14:24'>14:24</option>
+							<option value='14:33'>14:33</option>
+							<option value='14:42'>14:42</option>
+							<option value='14:51'>14:51</option>
+							<option value='15:00'>15:00</option>
+							<option value='15:09'>15:09</option>
+							<option value='15:18'>15:18</option>
+							<option value='15:27'>15:27</option>
+							<option value='15:36'>15:36</option>
+							<option value='15:45'>15:45</option>
+							<option value='15:54'>15:54</option>
+							<option value='16:03'>16:03</option>
+							<option value='16:12'>16:12</option>
+							<option value='16:21'>16:21</option>
+							<option value='16:30'>16:30</option>
+							<option value='16:39'>16:39</option>
+							<option value='16:48'>16:48</option>
+							<option value='16:57'>16:57</option>
+							<option value='17:06'>17:06</option>
+							<option value='17:15'>17:15</option>
+							<option value='17:24'>17:24</option>
+							<option value='17:33'>17:33</option>
+							<option value='17:42'>17:42</option>
+							<option value='17:51'>17:51</option>
+							<option value='18:00'>18:00</option>
+							<option value='18:12'>18:12</option>
+							<option value='18:24'>18:24</option>
+							<option value='18:36'>18:36</option>
+							<option value='18:48'>18:48</option>
+							<option value='19:00'>19:00</option>
+							<option value='19:24'>19:24</option>
+							<option value='19:48'>19:48</option>
+							<option value='20:12'>20:12</option>
+							<option value='20:36'>20:36</option>
+							<option value='21:00' selected={true}>
+								21:00
+							</option>
+							<option value='21:01'>21:01</option>
+							<option value='21:03'>21:03</option>
+							<option value='21:05'>21:05</option>
+							<option value='21:07'>21:07</option>
+							<option value='21:09'>21:09</option>
+							<option value='21:10'>21:10</option>
+							<option value='21:12'>21:12</option>
+							<option value='21:14'>21:14</option>
+							<option value='21:16'>21:16</option>
+							<option value='21:18'>21:18</option>
+							<option value='21:19'>21:19</option>
+							<option value='21:21'>21:21</option>
+							<option value='21:23'>21:23</option>
+							<option value='21:25'>21:25</option>
+							<option value='21:27'>21:27</option>
+							<option value='21:28'>21:28</option>
+							<option value='21:30'>21:30</option>
+							<option value='21:32'>21:32</option>
+							<option value='21:34'>21:34</option>
+							<option value='21:36'>21:36</option>
+							<option value='21:37'>21:37</option>
+							<option value='21:39'>21:39</option>
+							<option value='21:41'>21:41</option>
+							<option value='21:43'>21:43</option>
+							<option value='21:45'>21:45</option>
+							<option value='21:46'>21:46</option>
+							<option value='21:48'>21:48</option>
+							<option value='21:50'>21:50</option>
+							<option value='21:52'>21:52</option>
+							<option value='21:54'>21:54</option>
+							<option value='21:55'>21:55</option>
+							<option value='21:57'>21:57</option>
+							<option value='21:59'>21:59</option>
+							<option value='22:01'>22:01</option>
+							<option value='22:03'>22:03</option>
+							<option value='22:04'>22:04</option>
+							<option value='22:06'>22:06</option>
+							<option value='22:08'>22:08</option>
+							<option value='22:10'>22:10</option>
+							<option value='22:12'>22:12</option>
+							<option value='22:13'>22:13</option>
+							<option value='22:15'>22:15</option>
+							<option value='22:17'>22:17</option>
+							<option value='22:19'>22:19</option>
+							<option value='22:21'>22:21</option>
+							<option value='22:22'>22:22</option>
+							<option value='22:24'>22:24</option>
+							<option value='22:26'>22:26</option>
+							<option value='22:28'>22:28</option>
+							<option value='22:30'>22:30</option>
+							<option value='22:31'>22:31</option>
+							<option value='22:33'>22:33</option>
+							<option value='22:35'>22:35</option>
+							<option value='22:37'>22:37</option>
+							<option value='22:39'>22:39</option>
+							<option value='22:40'>22:40</option>
+							<option value='22:42'>22:42</option>
+							<option value='22:44'>22:44</option>
+							<option value='22:46'>22:46</option>
+							<option value='22:48'>22:48</option>
+						</select>
+						<br />
+						<input
+							className='form-input'
+							placeholder='Grader Initials'
+							id='twomrgrader'
+							type='text'
+							value={formData.twomrgrader}
+							onChange={(event) =>
+								setFormData({ ...formData, twomrgrader: event.target.value })
+							}></input>
+						<br />
+						<span>Points: </span>
+					</li>
+					<li className='form-li testsections'>
+						<span>Select One: Overall Time to reach required distance</span>
+						<br />
+						<label className='form-label form-radio-label' htmlFor='fivekrow'>
+							5K Row{' '}
+						</label>
+						<input
+							className='form-input'
+							id='fivekrow'
+							type='radio'
+							name='fivekrow'
+							value='false'
+							checked={formData.fivekrow === 'true'}
+							onChange={(event) =>
+								setFormData({ ...formData, fivekrow: event.target.value })
+							}></input>
+						<label className='form-label form-radio-label' htmlFor='onekswim'>
+							{' '}
+							1K Swim{' '}
+						</label>
+						<input
+							className='form-input'
+							id='onekswim'
+							type='radio'
+							name='onekswim'
+							value='false'
+							checked={formData.onekswim === 'true'}
+							onChange={(event) =>
+								setFormData({ ...formData, onekswim: event.target.value })
+							}></input>
+						<label className='form-label form-radio-label' htmlFor='onekswim'>
+							{' '}
+							12K Bike{' '}
+						</label>
+						<input
+							className='form-input'
+							id='twelvekbike'
+							type='radio'
+							name='twelvekbike'
+							value='false'
+							checked={formData.twelvekbike === 'true'}
+							onChange={(event) =>
+								setFormData({ ...formData, twelvekbike: event.target.value })
+							}></input>
+						<input
+							className='form-input'
+							placeholder='Time(minutes:seconds)'
+							id='choicescore'
+							type='text'
+							value={formData.choicescore}
+							onChange={(event) =>
+								setFormData({ ...formData, choicescore: event.target.value })
+							}></input>
+						<br />
+						<input
+							className='form-input'
+							placeholder='Grader Initials'
+							id='choicegrader'
+							type='text'
+							value={formData.choicegrader}
+							onChange={(event) =>
+								setFormData({ ...formData, choicegrader: event.target.value })
+							}></input>
+						<br />
+						<label className='form-label form-radio-label' htmlFor='choicego'>
+							Go{' '}
+						</label>
+						<input
+							className='form-input'
+							id='choicego'
+							type='radio'
+							name='choicego'
+							value='true'
+							checked={formData.choicego === 'true'}
+							onChange={(event) =>
+								setFormData({ ...formData, choicego: event.target.value })
+							}></input>
+						<label className='form-label form-radio-label' htmlFor='choicenogo'>
+							{' '}
+							No Go{' '}
+						</label>
+						<input
+							className='form-input'
+							id='choicenogo'
+							type='radio'
+							name='choicenogo'
+							value='false'
+							checked={formData.choicenogo === 'false'}
+							onChange={(event) =>
+								setFormData({ ...formData, choicenogo: event.target.value })
+							}></input>
+						<br />
+						<span>Points: </span>
+					</li>
+					<br />
+					<li className='signatures'>
+						<span>Soldier Signature: _________________________________</span>
+						<span>Date: ______________________</span>
+						<span>Total Points: ______________________</span>
+						<br />
+						<span>
+							NCOIC/OIC(Last, First, M.I.): _________________________________
+						</span>
+						<span>Rank: ___________________</span>
+						<span>Go: ________ No Go: ________</span>
+						<br />
+						<span>NCOIC/OIC Signature: _________________________________</span>
+						<span>Date: ______________________</span>
+					</li>
 				</ul>
 			</form>
 		</main>
@@ -497,12 +1042,3 @@ function ScoreCardForm(props) {
 }
 
 export default ScoreCardForm;
-
-//firstdeadlift
-//seconddeadlift
-//deadliftgrader
-//firstspt
-//secondspt
-//sptgrader
-//hrp
-//hrpgrader
