@@ -9,6 +9,7 @@ import AddCadet from './components/AddCadet/AddCadet';
 import CadetDetails from './components/CadetDetails/CadetDetails';
 import Home from './components/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ScoreCardForm from './components/ScoreCardForm/ScoreCardForm';
 
 export const CadetContext = createContext('');
 
@@ -34,6 +35,7 @@ function App() {
 						<Route path='/cadetlist' element={<CadetList />} />
 						<Route path='/addcadet' element={<AddCadet />} />
 						<Route path='/cadetlist/:id' element={<CadetDetails />} />
+						<Route path='/newscorecard' element={<ScoreCardForm />} />
 					</Routes>
 				</CadetContext.Provider>
 			</div>

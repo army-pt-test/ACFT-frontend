@@ -21,6 +21,9 @@ function Navigation(props) {
 						<li className='nav-li'>
 							<Link to='/addcadet'>Add Cadet</Link>
 						</li>
+						<li className='nav-li'>
+							<Link to='/newscorecard'>New Scorecard</Link>
+						</li>
 					</ul>
 				</div>
 			</nav>

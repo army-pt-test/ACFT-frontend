@@ -1,0 +1,15 @@
+li {
+	list-style-type: none;
+}
+
+.form-ul {
+	padding: 50px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.testsections {
+	border-top: 1px solid black;
+}
