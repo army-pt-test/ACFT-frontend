@@ -2,12 +2,17 @@ import React from 'react';
 import './Home.css';
 
 function Home(props) {
-    return (
-        <div>
-            <h1>Army PT Testing</h1>
-            <h2>This is a place to find out if you're the right fit!</h2>
-        </div>
-    );
+	return (
+		<div>
+			<h3>Quick Links</h3>
+			<ul>
+				<li>Create a New Scorecard</li>
+				<li>Add a New Cadet</li>
+				<li>Update a Test Score</li>
+				<li>Send Scorecard as PDF</li>
+			</ul>
+		</div>
+	);
 }
 
 export default Home;
